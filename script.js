@@ -74,7 +74,7 @@ function carregaImagens() {
         "Aprovado1 (15).jpeg"
     ]
 
-    const caminho = "/recursos/fotos/aprovados/"
+    const caminho = "./recursos/fotos/aprovados/"
 
     imagens.toReversed().forEach(nome => {
         let tagA = document.createElement("a")
