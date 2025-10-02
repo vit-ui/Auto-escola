@@ -87,3 +87,19 @@ function carregaImagens() {
         postsDiv.appendChild(tagA)
     })
 }
+
+// Accordion Passo a Passo
+document.querySelectorAll(".passo-titulo").forEach(titulo => {
+    titulo.addEventListener("click", () => {
+        const conteudo = titulo.nextElementSibling;
+        const seta = titulo.querySelector(".seta");
+
+        if (conteudo.style.display === "block") {
+            conteudo.style.display = "none";
+            seta.classList.remove("ativa");
+        } else {
+            conteudo.style.display = "block";
+            seta.classList.add("ativa");
+        }
+    });
+});
