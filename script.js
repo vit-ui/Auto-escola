@@ -1,7 +1,8 @@
 window.addEventListener("scroll", buttonState)
 document.addEventListener("DOMContentLoaded", () => {
-    const path = window.location.pathname
-    if (path.endsWith("aprovados.html")) {
+    // const path = window.location.pathname
+    const postsDiv = document.getElementById("posts")
+    if (postsDiv) {
         carregaImagens()
     }
     voltarConfig()
@@ -76,7 +77,7 @@ function carregaImagens() {
 
     const caminho = "./recursos/fotos/aprovados/"
 
-    imagens.toReversed().forEach(nome => {
+    imagens.reverse().forEach(nome => {
         let tagA = document.createElement("a")
         tagA.href = "https://www.instagram.com/autoescolarequinte/";
         tagA.target = "_blank";
