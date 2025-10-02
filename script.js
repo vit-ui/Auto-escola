@@ -2,9 +2,8 @@ window.addEventListener("scroll", buttonState)
 document.addEventListener("DOMContentLoaded", () => {
     // const path = window.location.pathname
     const postsDiv = document.getElementById("posts")
-    if (postsDiv) {
-        carregaImagens()
-    }
+    // if (postsDiv) {
+    carregaImagens()
     voltarConfig()
     topoConfig()
 })
@@ -55,7 +54,7 @@ function buttonState() {
 
 function carregaImagens() {
     let postsDiv = document.getElementById("posts")
-    if (!postsDiv) alert("Erro! Página errada")
+    if (!postsDiv) {return}
     console.log("CarregaImagens")
     const imagens = [
         "Aprovado1 (1).jpeg",
