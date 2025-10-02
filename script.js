@@ -56,7 +56,7 @@ function buttonState() {
 function carregaImagens() {
     let postsDiv = document.getElementById("posts")
     if (!postsDiv) alert("Erro! Página errada")
-
+    console.log("CarregaImagens")
     const imagens = [
         "Aprovado1 (1).jpeg",
         "Aprovado1 (2).jpeg",
