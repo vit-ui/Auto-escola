@@ -5,19 +5,17 @@
 
 h1{
     text-align: center;
-
-    /*margin-top: 15px;*/
-    margin-bottom: 14px;
-}
-
-#menu-horizontal ul li {
-    display: inline-block;
-    /*ficar em uma linha (e nao colunas)*/
 }
 
 #menu-horizontal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(49, 131, 245);
+    padding: 2px 2px;
+    color: white;
+    height: fit-content;
     flex-wrap: wrap;
 }
 
@@ -64,22 +62,20 @@ h1{
     justify-content: center;
 }
 
-img {
-    background: none;
-    margin: 1rem;
-    width: 50px;
-    transition: transform 0.5s;
-}
-
-#paratopo{
+.paratopo{
     display: none;
 }
+
 .topo {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
     margin: 2rem;
     opacity: 70%;
+    background: none;
+    margin: 1rem;
+    width: 30px;
+    transition: transform 0.5s;
     /* transform: rotate(90deg); */
 }
 
@@ -89,9 +85,12 @@ img {
 
 .voltar {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    margin: 2rem;
+    top: 0.5rem;
+    left: 0.25rem;
+    margin: 0.25rem;
+    background: none;
+    width: 35px;
+    transition: transform 0.5s;
     transform: rotate(-90deg);
 }
 
@@ -108,3 +107,25 @@ img {
     height: 10vh;
     /* background-color: rgb(87, 234, 128); */
 }
+
+#posts {
+    display: flex;             /* ativa o flexbox */
+    flex-wrap: wrap;           /* permite quebrar linha */
+    justify-content: center;   /* centraliza as imagens */
+    gap: 1rem;                 /* espaço entre elas */
+    padding: 1rem;
+}
+
+#posts img {
+    flex: 1 1 250px;           /* cada img ocupa no mínimo 200px */
+    max-width: 350px;          /* limita o tamanho máximo */
+    height: auto;              /* mantém proporção */
+    object-fit: cover;         /* se cortar, mantém enquadrado */
+    border-radius: 0.5rem;        /* opcional, cantos arredondados */
+    transition: transform 0.3s;
+}
+
+#posts img:hover {
+    transform: scale(1.05);    /* zoom suave no hover */
+}
+
