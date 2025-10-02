@@ -74,13 +74,13 @@ function carregaImagens() {
         "Aprovado1 (15).jpeg"
     ]
 
-    imagens.reverse().forEach(nome => {
+    imagens.toReversed().forEach(nome => {
         let tagA = document.createElement("a")
         tagA.href = "https://www.instagram.com/autoescolarequinte/";
         tagA.target = "_blank";
 
         let img = document.createElement("img")
-        img.src = "./recursos/fotos/aprovados/" + nome
+        img.src = "./recursos/fotos/aprovados/" + encodeURIComponent(nome)
         img.alt = "Aluno aprovado"
 
         tagA.appendChild(img)
